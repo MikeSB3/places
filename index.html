@@ -9,26 +9,46 @@
   </head>
   <body>
     <div class="container">
-      <form id="formOne">
-        <label for="enterCountry">Enter a Country:</label>
-        <input type="text" id="enterCountry">
-        <label for="enterCity">Enter a City:</label>
-        <input type="text" id="enterCity">
-        <label for="enterDate">Enter Date of Trip:</label>
-        <input type="date" id="enterDate">
-        <label for="enterLandmark">Enter Your Favorite Landmark</label>
-        <input type="text" id="enterLandmark">
-        <button type="submit" name="button">Submit</button>
-      </form>
-      <div>
-        <ul class="yourTrip">
-        </ul>
+      <div class="row">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <form id="formOne">
+              <div class="col-sm-12">
+                <label for="enterCountry">Enter a Country:</label>
+                <input type="text" id="enterCountry">
+              </div>
+              <div class="col-sm-12">
+                <label for="enterCity">Enter a City:</label>
+                <input type="text" id="enterCity">
+              </div>
+              <div class="col-sm-12">
+                <label for="enterDate">Enter Date of Trip:</label>
+                <input type="date" id="enterDate">
+              </div>
+              <div class="col-sm-12">
+                <label for="enterLandmark">Enter Your Favorite Landmark</label>
+                <input type="text" id="enterLandmark">
+              </div>
+              <div class="col-sm-12">
+                <button type="submit" name="button">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-      <div id="clickTrip">
-        <p>Country: <span class="enterCountry"></span></p>
-        <p>City: <span class="enterCity"></span></p>
-        <p>Date: <span class="enterDate"></span></p>
-        <p>Favorite Landmark: <span class="enterLandmark"></span></p>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <ul class="yourTrip">
+          </ul>
+          <div id="clickTrip">
+            <p><strong>Country: </strong><span class="enterCountry"></span></p>
+            <p><strong>City: </strong><span class="enterCity"></span></p>
+            <p><strong>Date: </strong><span class="enterDate"></span></p>
+            <p><strong>Favorite Landmark: </strong><span class="enterLandmark"></span></p>
+            <div id="buttons">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>

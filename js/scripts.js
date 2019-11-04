@@ -25,6 +25,18 @@ TripList.prototype.findTrip = function(id) {
   return false;
 }
 
+TripList.prototype.deleteTrip = function(id) {
+  for(var i=0; i<this.list.length; i++) {
+    if (this.list[i]) {
+      if (this.list[i].id == id) {
+        delete this.list[i];
+        return true;
+      }
+    }
+  };
+  return false;
+}
+
 //Business Logic for Trip
 function Trip(country, city, date, landmark) {
   this.country = country;
@@ -51,12 +63,19 @@ function showTrip(tripId) {
     $("span.enterCity").html(list.city);
     $("span.enterDate").html(list.date);
     $("span.enterLandmark").html(list.landmark);
+    var buttons = $("#buttons");
+    buttons.empty();
+    buttons.append("<button class='deleteButton' id=" + list.id + ">Delete</button>");
 }
 
 function attachTripListeners () {
   $("ul.yourTrip").on("click", "li", function() {
     showTrip(this.id);
   });
+  $("#buttons").on("click", ".deleteButton", function() {
+   tripList.deleteTrip(this.id);
+   displayYourTrip(tripList);
+ });
 };
 
 $(document).ready(function() {
